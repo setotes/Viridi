@@ -1,0 +1,10 @@
+{
+    "name": "viridi",
+    "description": "A shitty discord bot",
+    "dependencies": {
+        "discord.js": "^11.5.1",
+        "fs": "0.0.1-security",
+        "moment": "^2.24.0",
+        "seedrandom": "^3.0.3"
+    }
+}
