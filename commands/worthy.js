@@ -1,18 +1,18 @@
 const Discord = require('discord.js')
-require('seedrandom')
+const botconfig = require('../botconfig.json')
 module.exports.run = async (bot,message, args) => {
-    var responses = [
-        'You are **Worthy**! You deserve a cookie. :cookie:',
-        'You are not **Unworthy**! You should be punished. :skull:',
-        'Your fate has not been determined'
-    ];
-    var response = responses[Math.floor(Math.random() * responses.length)];
-    var embed = new Discord.RichEmbed();
-    embed.setDescription(response);
-    embed.setColor(159039);
-    embed.setFooter(`Viridi`);
-    embed.setTimestamp();
-    message.channel.send(embed);
+    var taest = [
+        `${message.author.username}, you have been declared an enemy of the state. You are not worthy💀`,
+        `${message.author.username}, the people have decided you are worthy 👌 `,
+        `${message.author.username}, your fate has not been determined 🚫 `
+    ]
+    var test = taest[Math.floor(Math.random() * taest.length)];
+    let membed = new Discord.RichEmbed();
+    membed.setAuthor(test)
+    membed.setColor(botconfig.green)
+    membed.setFooter('Viridi')
+    membed.setTimestamp();
+    message.channel.send(membed)
 }
 module.exports.help = {
     name: 'worthy'
