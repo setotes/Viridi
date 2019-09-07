@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const token = "";
 const botconfig = require("./botconfig.json");
 const fs = require('fs');
 const xp = require("./xp.json");
