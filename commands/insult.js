@@ -1,4 +1,5 @@
 const Discord = require('discord.js')
+const botconfig = require('../botconfig.jon')
 
 module.exports.run = async (bot,message, args) => {
     var roast = message.content.slice (8);
@@ -10,7 +11,7 @@ module.exports.run = async (bot,message, args) => {
     var insult = insults[Math.floor(Math.random() * insults.length)];
     var embed = new Discord.RichEmbed();
     embed.setDescription(insult);
-    embed.setColor(159039);
+    embed.setColor(botconfig.forestgreen);
     embed.setFooter(`Viridi`);
     embed.setTimestamp();
     message.channel.send(embed);
