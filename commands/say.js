@@ -1,9 +1,10 @@
 const Discord = require('discord.js')
+const botconfig = require('../botconfig.json')
 
 module.exports.run = async (bot,message, args) => {
     sayMessage = message.content.slice (4);
     message.channel.send({embed: {
-        color: 159039,
+        color: botconfig.forestgreen,
         description: sayMessage
     }})
 }
