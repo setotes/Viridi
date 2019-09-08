@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const botconfig = require('../botconfig.json')
 
 module.exports.run = async (client, message, args) => {
 
@@ -32,7 +33,7 @@ module.exports.run = async (client, message, args) => {
                                   .setAuthor(`Winner: ${winnerMessage.author.username}`, winnerMessage.author.displayAvatarURL)
                                   .setTitle(`Correct Answer: \`${winnerMessage.content}\``)
                                   .setFooter(`Question: ${item.q}`)
-                                  .setColor(159039)
+                                  .setColor(botconfig.forestgreen)
                                   .setFooter('Viridi')
                                   .setTimestamp()
                                 })
@@ -42,7 +43,7 @@ module.exports.run = async (client, message, args) => {
                                   .setAuthor('No one got the answer in time!')
                                   .setTitle(`Correct Answer(s): \`${item.a}\``)
                                   .setFooter(`Question: ${item.q}`)
-                                  .setColor(159039)
+                                  .setColor(botconfig.forestgreen)
                                   .setFooter('Viridi')
                                   .setTimestamp()
                                 })
