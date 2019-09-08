@@ -1,4 +1,5 @@
 const Discord = require('discord.js')
+const botconfig = require('../botconfig.json')
 
 module.exports.run = async (bot,message, args) => {
     let user;
@@ -19,7 +20,7 @@ module.exports.run = async (bot,message, args) => {
         var url = gifs[Math.floor(Math.random() * gifs.length)];
      var embed = new Discord.RichEmbed()
         embed.setDescription(response);
-        embed.setColor(159039);
+        embed.setColor(botconfig.forestgreen);
         embed.setImage(url);
         embed.setFooter(`Viridi`)
         embed.setTimestamp();
