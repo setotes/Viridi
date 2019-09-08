@@ -1,4 +1,5 @@
 const Discord = require("discord.js"); 
+const botconfig = require('../botconfig.json')
 let xp = require("../xp.json");
 
 module.exports.run = async (bot, message, args) => {
@@ -17,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
 
   let lvlEmbed = new Discord.RichEmbed()
   .setAuthor(curxp + '/' + nxtLvlXp)
-  .setColor(159039)
+  .setColor(botconfig.forestgreen)
   .addField('Level', curlvl)
   .addField('XP', curxp)
   .setTimestamp()
