@@ -1,9 +1,9 @@
 const Discord = require('discord.js')
-
+const Discord = require('../botconfig.json')
 module.exports.run = async (bot,message, args) => {
     var embed = new Discord.RichEmbed();
     embed.setAuthor('Commands')
-    embed.setColor(159039)
+    embed.setColor(botconfig.forestgreen)
     embed.addField('Fun', '`suicide` `worthy` `say` `insult` `avatar` `riddle`')
     embed.addField('Actions', '`slap` `kiss` `nuke` `hug` `kill`')
     embed.addField('Administration', '`prune`')
