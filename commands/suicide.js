@@ -1,4 +1,5 @@
 const Discord = require('discord.js')
+const botconfig = require('../botconfig.json')
 
 module.exports.run = async (bot,message, args) => {
     var responses = [
@@ -18,7 +19,7 @@ module.exports.run = async (bot,message, args) => {
     var response = responses[Math.floor(Math.random() * responses.length)];
     var embed = new Discord.RichEmbed();
     embed.setDescription(response);
-    embed.setColor(159039);
+    embed.setColor(botconfig.forestgreen);
     embed.setFooter(`Viridi`);
     embed.setTimestamp();
     message.channel.send(embed);
