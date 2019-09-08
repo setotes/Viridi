@@ -1,5 +1,6 @@
 const Discord = require('discord.js'); 
 const moment = require('moment');
+const botconfig = require('../botconfig.json')
 
 module.exports.run = async (bot, message, args) => {
     let user;
@@ -10,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
      }
      const member = message.guild.member(user);
      var embed = new Discord.RichEmbed()
-        embed.setColor(159039) 
+        embed.setColor(botconfig.forestgreen) 
         embed.setThumbnail(user.avatarURL)
         embed.setTitle(`${user.username}#${user.discriminator}`)
         embed.addField('ID', `${user.id}`, true)
