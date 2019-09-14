@@ -1,4 +1,6 @@
 const Discord = require('discord.js');
+const botconfig = require('../botconfig.json')
+
 
 module.exports.run = async (client, message, args) => {
 
@@ -8,12 +10,13 @@ module.exports.run = async (client, message, args) => {
 
     message.channel.bulkDelete(args[0]).then(() => { 
         message.channel.send({embed: {
-            color: 159039,
+            color: botconfig.forestgreen,
         description: `${args[0]} messages have been deleted.`
             }}).then(msg => msg.delete(5000));
     });
 
 } 
 module.exports.help = {
-    name: 'prune'
+    name: 'prune',
+    aliases: ["purge"]
 }
