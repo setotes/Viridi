@@ -1,10 +1,10 @@
 const Discord = require('discord.js')
-const Discord = require('../botconfig.json')
+const botconfig = require('../botconfig.json')
 module.exports.run = async (bot,message, args) => {
     var embed = new Discord.RichEmbed();
     embed.setAuthor('Commands')
     embed.setColor(botconfig.forestgreen)
-    embed.addField('Fun', '`suicide` `worthy` `say` `insult` `avatar` `riddle`')
+    embed.addField('Fun', '`suicide` `worthy` `say` `avatar` `riddle`')
     embed.addField('Actions', '`slap` `kiss` `nuke` `hug` `kill`')
     embed.addField('Administration', '`prune`')
     embed.addField('Social', '`rank`')
@@ -14,5 +14,6 @@ module.exports.run = async (bot,message, args) => {
     message.channel.send(embed)
 }
 module.exports.help = {
-    name: 'help'
+    name: 'help',
+    aliases: ["h", "commands"]
 }
