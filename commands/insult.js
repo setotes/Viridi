@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-const botconfig = require('../botconfig.jon')
+const botconfig = require('../botconfig.json')
 
 module.exports.run = async (bot,message, args) => {
     var roast = message.content.slice (8);
