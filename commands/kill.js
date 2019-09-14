@@ -30,5 +30,6 @@ var url = gifs[Math.floor(Math.random() * gifs.length)];
 message.channel.send(embed);
 }
 module.exports.help = {
-    name: 'kill'
+    name: 'kill',
+    aliases: ["murder"]
 }
